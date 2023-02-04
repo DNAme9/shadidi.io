@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Player - Registration</title>
+    <link rel="stylesheet" href="newlogin.css">
+    <link rel="stylesheet" href="home.css">
+    
+    
+</head>
+<body>
+    <div class="main" id="main">
+    <div class="maine">
+
+            
+              
+      <div class="right">
+      
+        <div class="forme">
+            <h1 style="font-weight:small;">Please Enter Correct details</h1>
+        <form action="#" name="myForm" id="form"  onsubmit="return validateForm()">
+          <input type="text" placeholder="First Name" name="fname" id="finame">
+          <div id="fname"></div>
+          <br>
+          <input type="text" placeholder="Last Name" name="lname" id="liname">
+          <div id="lname"></div>
+          <br>
+          <input type="number" placeholder="Age" name="age" id="agname">
+          <div id="age"></div>
+          <br>
+          <input type="text" placeholder="Team" name="team" id="tmname">
+          <div id="team"></div>
+          <br>
+          <input type="text" placeholder="Email Address" name="email" id="mailname">
+          <div id="email"></div>
+          <br>
+          <input type="password" placeholder="Password" name="password" id="pdname">
+          <div id="pswd"></div>
+          <br>
+          <button type="submit" onclick="return dna()">Submit Your Details</button><br><br>
+          <button><a href="Log in.html"> Login</a></button>
+          
+        </form>
+    </div>
+      </div>
+    </div>
+</div>
+    <script src="app.js">
+        try {
+            function validateForm() {
+    var fname = document.forms["myForm"]["fname"].value;
+    var lname = document.forms["myForm"]["lname"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var pswd = document.forms["myForm"]["password"].value;
+    var atposition = email.indexOf("@");
+    var dotposition = email.lastIndexOf(".");
+
+
+
+
+    if (fname.length < 1) {
+        document.getElementById("fname").innerHTML = "First name cannot be empty";
+        document.forms["myForm"]["fname"].classList.add("error");
+    }
+    if (lname.length < 1) {
+        document.getElementById("lname").innerHTML = "Last name cannot be empty";
+        document.forms["myForm"]["lname"].classList.add("error");
+    }
+    
+    if ((email.length < 1) || (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length)) {
+        document.getElementById("email").innerHTML = "Looks like this is not an email";
+        document.forms["myForm"]["email"].classList.add("error");
+    }
+    if (pswd.length < 6) {
+        document.getElementById("pswd").innerHTML = "Password must be at least 6 characters long";
+        document.forms["myForm"]["password"].classList.add("error");
+    }
+    if (fname.length < 1 || lname.length < 1 || email.length < 1 || pswd.length < 6 || (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length)) {
+        return false;
+    } 
+    else {
+        alert("You are Signed Up!");
+    }
+}
+
+        }
+        catch(err) {
+ alert("error occured");
+
+        }
+    </script>
+  </body>
+</html>

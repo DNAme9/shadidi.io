@@ -1,0 +1,55 @@
+body
+{
+    background-color: white;
+}
+h1{
+    font-size : 2rem;
+    color: red;
+}
+hr{
+    height: 1px;
+    background-color: red;
+    border:none;
+}
+.container{
+    padding-left: 28rem;
+    padding-top: 10rem;
+
+}
+.dalton
+{
+    padding-top :20px ;
+    padding-bottom: 20px;
+    text-align : center;
+    border :1px;
+    background-color: white;
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: red 0px 2px 8px;
+}
+button
+{
+    font-size: medium;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width:20rem;
+    height: 40px;
+    cursor: pointer;
+}
+button:hover{
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+input{
+    width:310px;
+    height:50px;
+    border-radius: 1px;
+    border: transparent;
+    border-bottom: 2px solid  red;
+    text-align: left;
+    outline: none;
+}
